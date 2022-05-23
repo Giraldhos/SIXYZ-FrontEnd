@@ -1,0 +1,140 @@
+
+:root{
+    --colorTextos: #f9f4f4d9;
+}
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+    height: 650;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background-image:url('../archivosv/checkmybus-autobus.jpg');
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+}
+.contenedor .fom .form-header .form-title{
+   font-weight: normal; 
+   font-family:
+    
+}
+.contenedor .fom, form{
+    border: 2px solid white;
+    background: rgba(0,  0, 0, 0.8);
+    box-shadow:inset 0 0 30px rgb(248, 248, 5), 0 0 10px rgb(255, 208, 0);
+    border-radius: 40px;
+    max-width: 400px;
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+    color: white;
+
+    
+}
+
+h6{
+    text-align: justify;
+    padding-top: 5%;
+}
+.form-title{
+    margin: 0;   
+    font-size: 50px;
+    text-shadow: 0 0 5px yellow, 0 0 15px yellow, 0 0 20px, 0 0 450px yellow;
+}
+
+
+/* form{
+    background: #fff ;
+    padding:  0% 2%;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+} */
+.form{
+    width: 100%;
+    margin: auto;
+}
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input{
+    background: none;
+    color: #c6c6c6 ;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+
+
+}
+input:focus{
+    outline: none;
+    color: #e4dfdf;
+}
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #efdc0e;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #f9f104, #feb804);
+    transition: 0.3s ease width;
+    left: 0;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+input:focus~.barra::before{
+    width: 100%;  
+}
+
+
+button{
+    font-family: 'roboto';
+    background: #ffea05;
+    border: none;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
